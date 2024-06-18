@@ -1,0 +1,14 @@
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 180px;
+  gap: 100px;
+  justify-content: space-between;
+  align-items: center;
+
+  .language-switchers {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+}

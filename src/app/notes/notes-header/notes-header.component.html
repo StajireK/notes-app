@@ -1,0 +1,10 @@
+<div class="header-wrapper">
+  <span class="label">{{ 'title' | translate }}</span>
+  @if (!isSettingsPage()) {
+    <div class="settings">
+      <button mat-icon-button (click)="goToSettings()">
+        <mat-icon>settings</mat-icon>
+      </button>
+    </div>
+  }
+</div>

@@ -1,0 +1,9 @@
+<div class="footer-wrapper">
+  <mat-form-field class="input-field">
+    <mat-label>{{ 'adding_notes' | translate }}</mat-label>
+    <input matInput type="text" [(ngModel)]="value">
+    <button matSuffix mat-icon-button aria-label="Add note" [disabled]="!value" (click)="addNote()">
+      <mat-icon>add_circle_outline</mat-icon>
+    </button>
+  </mat-form-field>
+</div>

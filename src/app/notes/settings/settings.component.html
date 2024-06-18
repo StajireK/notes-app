@@ -1,0 +1,15 @@
+<div class="buttons-wrapper">
+  <div class="language-switchers">
+    <button mat-fab extended
+            (click)="onLanguageChange('en')"
+            [disabled]="selectedLanguage === 'en'">🇬🇧 English</button>
+    <button mat-fab extended
+            (click)="onLanguageChange('cs')"
+            [disabled]="selectedLanguage === 'cs'">🇨🇿 Czech</button>
+  </div>
+
+  <button mat-fab extended (click)="goBack()">
+    <mat-icon>arrow_back_ios</mat-icon>
+    {{'back_to_list' | translate }}
+  </button>
+</div>

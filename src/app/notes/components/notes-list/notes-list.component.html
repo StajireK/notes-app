@@ -1,0 +1,15 @@
+<div class="note-list-wrapper">
+  <div class="note-list-container">
+    @if (isLoading) {
+      <mat-spinner></mat-spinner>
+    } @else {
+      @for (note of notes; track note.id) {
+        <app-note [note]="note"></app-note>
+      }
+    }
+  </div>
+  <app-add-note></app-add-note>
+</div>
+
+
+

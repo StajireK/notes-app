@@ -1,0 +1,24 @@
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  --shadow-color: #ff4081;
+  box-shadow: 0 2px 5px 0 var(--shadow-color);
+  //border-radius: 30px;
+}
+
+.label {
+  line-height: 60px;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  flex: 1;
+}
+
+.settings {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}

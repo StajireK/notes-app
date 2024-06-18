@@ -1,0 +1,33 @@
+<div class="detail-container">
+  @if (isLoading) {
+    <mat-spinner></mat-spinner>
+  } @else {
+    @if (note) {
+      <mat-form-field>
+        <input [disabled]="!isEditMode" matInput type="text" [(ngModel)]="note.title">
+      </mat-form-field>
+    }
+
+    <div class="note-actions-wrapper">
+      <button mat-fab extended (click)="edit()" [disabled]="isEditMode">
+        <mat-icon>edit</mat-icon>
+        {{'edit_note' | translate }}
+      </button>
+      <button mat-fab extended (click)="save()" [disabled]="!isEditMode">
+        <mat-icon>save</mat-icon>
+        {{'save_note' | translate }}
+      </button>
+    </div>
+
+    <div class="buttons-wrapper">
+      <button mat-fab extended (click)="deleteNote()">
+        <mat-icon>delete_forever</mat-icon>
+        {{'delete_note' | translate }}
+      </button>
+      <button mat-fab extended (click)="goBack()">
+        <mat-icon>arrow_back_ios</mat-icon>
+        {{'back_to_list' | translate }}
+      </button>
+    </div>
+  }
+</div>

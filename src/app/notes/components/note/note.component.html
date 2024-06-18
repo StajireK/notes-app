@@ -1,0 +1,6 @@
+@if (note && note.id) {
+  <div class="note-container" (click)="redirectToDetail(note.id)">
+    <div class="note" >{{ note.title }}</div>
+  </div>
+}
+
