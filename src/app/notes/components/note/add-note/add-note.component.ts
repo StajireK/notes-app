@@ -1,4 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+} from '@angular/core';
 import { MatButton, MatIconButton } from '@angular/material/button';
 import {
   MatFormField,
@@ -32,7 +36,10 @@ import { ApiService } from '../../../api.service';
 export class AddNoteComponent {
   public value: string = '';
 
-  constructor(private apiService: ApiService) {}
+  constructor(
+    private apiService: ApiService,
+    private changeDetectorRef: ChangeDetectorRef,
+  ) {}
 
   public addNote() {
     if (this.value) {
@@ -40,6 +47,7 @@ export class AddNoteComponent {
       this.apiService.createNote(newNote).subscribe({
         next: () => {
           this.value = '';
+          this.changeDetectorRef.markForCheck();
         },
         error: (error) => console.error('Error adding note:', error),
       });
