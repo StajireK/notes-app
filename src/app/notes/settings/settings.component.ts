@@ -27,7 +27,7 @@ export class SettingsComponent {
 
   constructor(
     private router: Router,
-    private translateService: TranslateService,
+    public translateService: TranslateService,
   ) {}
 
   public onLanguageChange(lang: string): void {

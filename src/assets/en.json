@@ -4,5 +4,9 @@
   "delete_note" : "Delete note",
   "back_to_list": "Return to list",
   "edit_note" : "Edit note",
-  "save_note" : "Save note"
+  "save_note" : "Save note",
+  "no_notes" : "There are no notes.",
+  "note_deleted" : "Note deleted successfully",
+  "note_updated" : "Note updated successfully",
+  "note_added" : "Note added successfully"
 }

@@ -6,7 +6,7 @@ import csTranslations from '../../assets/cs.json';
   providedIn: 'root',
 })
 export class TranslateService {
-  private translations = new Map<string, any>();
+  private translations = new Map<string, { [key: string]: string }>();
   private currentLang: string = 'en';
 
   constructor() {
@@ -18,7 +18,15 @@ export class TranslateService {
     this.currentLang = lang;
   }
 
+  public getLanguage(): string {
+    return this.currentLang;
+  }
+
   public translate(key: string): string {
-    return this.translations.get(this.currentLang)[key] || key;
+    const languagePack = this.translations.get(this.currentLang);
+    if (languagePack && key in languagePack) {
+      return languagePack[key];
+    }
+    return key; // Return the key itself if translation is not found
   }
 }

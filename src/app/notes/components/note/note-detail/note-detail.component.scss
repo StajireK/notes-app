@@ -13,11 +13,6 @@
       text-align: center;
       font-size: 22px;
     }
-
-    // Removing background from input field
-    ::ng-deep .mat-mdc-text-field-wrapper {
-      background-color: transparent !important;
-    }
   }
 
   .note-actions-wrapper {

@@ -2,10 +2,10 @@
   <div class="language-switchers">
     <button mat-fab extended
             (click)="onLanguageChange('en')"
-            [disabled]="selectedLanguage === 'en'">🇬🇧 English</button>
+            [disabled]="this.translateService.getLanguage() === 'en'">🇬🇧 English</button>
     <button mat-fab extended
             (click)="onLanguageChange('cs')"
-            [disabled]="selectedLanguage === 'cs'">🇨🇿 Czech</button>
+            [disabled]="this.translateService.getLanguage() === 'cs'">🇨🇿 Czech</button>
   </div>
 
   <button mat-fab extended (click)="goBack()">

@@ -4,5 +4,9 @@
   "delete_note" : "Smazat poznámku",
   "back_to_list": "Zpět na seznam",
   "edit_note" : "Upravit poznámku",
-  "save_note" : "Uložit poznámku"
+  "save_note" : "Uložit poznámku",
+  "no_notes" : "Nejsou zde žádné poznámky",
+  "note_deleted" : "Poznámka úspešně smazána",
+  "note_updated" : "Poznámka úspešně upravena",
+  "note_added" : "Poznámka úspešně přidána"
 }

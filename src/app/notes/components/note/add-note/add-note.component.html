@@ -1,9 +1,9 @@
 <div class="footer-wrapper">
-  <form (ngSubmit)="addNote()">
+  <form [formGroup]="noteForm" (ngSubmit)="addNote()">
     <mat-form-field class="input-field">
       <mat-label>{{ 'adding_notes' | translate }}</mat-label>
-      <input matInput type="text" [(ngModel)]="value" name="note">
-      <button type="submit" matSuffix mat-icon-button aria-label="Add note" [disabled]="!value">
+      <input matInput formControlName="note" name="note">
+      <button type="submit" matSuffix mat-icon-button aria-label="Add note" [disabled]="!noteForm.valid">
         <mat-icon>add_circle_outline</mat-icon>
       </button>
     </mat-form-field>

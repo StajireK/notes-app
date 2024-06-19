@@ -8,8 +8,3 @@
 .input-field {
   width: 350px;
 }
-
-// Removing background from input field
-::ng-deep .mat-mdc-text-field-wrapper {
-  background-color: transparent !important;
-}

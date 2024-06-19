@@ -17,3 +17,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `npx cypress open` to execute the end-to-end tests via cypress.
+
+## Running linter
+
+Run `npm run lint` to execute the linter to see errors and warnings.

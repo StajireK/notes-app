@@ -2,6 +2,10 @@
   <div class="note-list-container">
     @if (isLoading) {
       <mat-spinner></mat-spinner>
+    } @else if (notes.length === 0) {
+      <div class="no-notes">
+        {{ 'no_notes' | translate }}
+      </div>
     } @else {
       @for (note of notes; track note.id) {
         <app-note [note]="note"></app-note>
